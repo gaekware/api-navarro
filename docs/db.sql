@@ -15,5 +15,5 @@ CREATE TABLE aula_aluno_registro (
 	id_aula_aluno_registro SERIAL PRIMARY KEY,
 	tipo_registro TIPO_REGISTRO,
 	dthr_registro TIMESTAMP,
-	id_aula_aluno INT
+	mac TEXT NOT NULL
 );

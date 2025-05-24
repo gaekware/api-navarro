@@ -11,14 +11,18 @@ class IotController {
 
         try {
             for (const device of devices) {
-                if (!device.mac) {
-                    return res.status(400).json({ error: 'Bad request, device must have mac' });
+                if (!device.mac || device.mac === '' || !device.tipo_registro) {
+                    return res.status(400).json({ error: 'Bad request, device must have mac and tipo_registro' });
+                }
+
+                if (device.tipo_registro !== 'entrada' && device.tipo_registro !== 'saida') {
+                    return res.status(400).json({ error: 'Bad request, tipo_registro must be entrada or saida' });
                 }
 
                 await aulaAlunoRegistroModel.criarRegistro({
-                    tipo_registro: 'entrada',
+                    tipo_registro: device.tipo_registro,
                     dthr_registro: new Date(),
-                    id_aula_aluno: 1
+                    mac: device.mac,
                 });
             }
 

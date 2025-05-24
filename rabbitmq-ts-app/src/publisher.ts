@@ -23,13 +23,15 @@ sendMessage({
       "mac": "D8:0D:17:F4:51:C6",
       "type": "wifi",
       "rssi": -59,
-      "name": "WiFi Device"
+      "name": "WiFi Device",
+      "tipo_registro": "entrada"
     },
     {
       "mac": "DE:0D:17:F4:51:C6",
       "type": "wifi",
       "rssi": -58,
-      "name": "WiFi Device"
+      "name": "WiFi Device",
+      "tipo_registro": "saida"
     }
   ]
 });
