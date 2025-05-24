@@ -29,14 +29,6 @@ class IotController {
             return res.status(500).json({ error: 'Internal server error' });
         }
     }
-
-    async test(req: Request, res: Response): Promise<any> {
-        try {
-            return res.status(200).json({ message: 'testado' });
-        } catch (error) {
-            return res.status(400).json({ error: 'Error on test route' + error });
-        }
-    }
 }
 
 export default new IotController();
