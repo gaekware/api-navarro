@@ -7,5 +7,5 @@ export const config = {
   ROUTING_KEY: 'mail.send',
   QUEUE: 'main_queue',
   DLQ: 'dlq_queue',
-  REST_API_URL: 'https://unirecog.gaek.com.br/api/iot/register'
+  REST_API_URL: 'http://localhost:5000/api/iot/register'
 };
